@@ -18,7 +18,9 @@ tokens = concatMap tokens' . words
         tokens' "÷" = [Div]
         tokens' "^" = [Exp]
         tokens' ('(' : str) = LParen : tokens' str
+        tokens' (')' : str) = RParen : tokens' str
         tokens' str
+          | last str == '(' = tokens' (init str) ++ [LParen]
           | last str == ')' = tokens' (init str) ++ [RParen]
           | otherwise       = [tokens'' str]
 
