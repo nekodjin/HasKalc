@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# build script for APCSP_Performance
+
+shopt -s globstar
+
+if ! which ghc > /dev/null; then
+    echo 'Required dependency ghc is not satisfied.'
+    exit
+fi
+
+ghc=$(which ghc)
+wd=$(dirname $0)
+
+if ! test -d $wd/src; then
+    echo 'Something has gone wrong. The script cannot locate the source files.'
+    exit
+fi
+
+if ! test -d $wd/build; then
+    mkdir $wd/build
+fi
+
+if ! test -d $wd/target; then
+    mkdir $wd/target
+fi
+
+$ghc $wd/src/**/*.hs -outputdir $wd/build -o $wd/target/apcsp-performance
