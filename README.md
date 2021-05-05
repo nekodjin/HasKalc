@@ -38,7 +38,7 @@ The source code can be found in the [`/src`](./src/) directory.
 
 ## Dependencies
 This project relies on the following dependencies:
-- `ghc` - Glasgow Haskell Compiler
+- Glasgow Haskell Compiler (`ghc`)
 
 ## Building
 With git installed, the project can be cloned with the command
