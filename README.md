@@ -48,14 +48,10 @@ the project into the current working directory.
 Users that have a POSIX-compatible shell handy can use the build script
 provided by running `./compile` from the root directory.
 
-For all others, assuming `ghc` is installed, the command should resemble
-`ghc src/**/*.hs -outputdir build/ -o target/apcsp-performance`. If you do not
-have modern globbing, you may need to replace `src/**/*.hs` with
-`src/main.hs src/*/*.hs`. Also make sure that the `/build` and `/target`
-directories exist before running this command, as unlike the script, this
-command will not automatically create them. For macOS and Linux, this can be
-done with `mkdir build/ && mkdir target/`, and for Windows, replace `mkdir`
-with `md`.
+Windows users can compile the project by running
+`ghc src\main.hs src\*\*.hs -outputdir build\ -o target\apcsp-performance` in
+CMD.
 
 After compilation, either with the provided script or with the provided
-command, the executable should be located at `target/apcsp-performance`.
+command, the executable should be located at `target/apcsp-performance`
+(`target\apcsp-performance` for Windows users).
