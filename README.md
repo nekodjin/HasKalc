@@ -46,7 +46,7 @@ With git installed, the project can be cloned with the command
 the project into the current working directory.
 
 Users that have a POSIX-compatible shell handy can use the build script
-provided by running `./compile` from the root directory.
+provided by running `./compile` from the project's root directory.
 
 Windows users can compile the project by running
 `ghc src\main.hs src\*\*.hs -outputdir build\ -o target\apcsp-performance.exe`
