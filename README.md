@@ -50,7 +50,7 @@ Users that have a `bash` distribution handy can use the bash script provided by 
 For all others, assuming `ghc` is installed, the command should resemble
 `ghc src/**/*.hs -outputdir build/ -o target/apcsp-performance`. If you do not
 have modern globbing, you may need to replace `src/**/*.hs` with
-`src/main.hs src/*/*.hs`. Also make sure that the `/build` and `/src`
+`src/main.hs src/*/*.hs`. Also make sure that the `/build` and `/target`
 directories exist before running this command, as unlike the script, this
 command will not automatically create them. For macOS and Linux, this can be
 done with `mkdir build/ && mkdir target/`, and for Windows, replace `mkdir`
