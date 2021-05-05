@@ -1,7 +1,5 @@
 # build script for APCSP_Performance
 
-shopt -s globstar
-
 if ! which ghc > /dev/null; then
     echo 'Required dependency ghc is not satisfied.'
     exit
