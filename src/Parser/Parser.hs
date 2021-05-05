@@ -18,3 +18,17 @@ checkParens = checkParens' 0
         checkParens' n (_:xs) =
             checkParens' n xs
 
+checkIllegal :: [Token] -> Maybe [String]
+checkIllegal tokens =
+    if any illegal tokens then
+        Just $ map unwrap $ filter illegal tokens
+    else
+        Nothing
+    where
+        illegal :: Token -> Bool
+        illegal (Illegal _) = True
+        illegal _           = False
+
+        unwrap :: Token -> String
+        unwrap (Illegal s) = s
+        unwrap _           = error "Attempted to unwrap a legal token."
