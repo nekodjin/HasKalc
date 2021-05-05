@@ -49,9 +49,9 @@ Users that have a POSIX-compatible shell handy can use the build script
 provided by running `./compile` from the root directory.
 
 Windows users can compile the project by running
-`ghc src\main.hs src\*\*.hs -outputdir build\ -o target\apcsp-performance` in
-CMD.
+`ghc src\main.hs src\*\*.hs -outputdir build\ -o target\apcsp-performance.exe`
+in CMD.
 
 After compilation, either with the provided script or with the provided
 command, the executable should be located at `target/apcsp-performance`
-(`target\apcsp-performance` for Windows users).
+(`target\apcsp-performance.exe` for Windows users).
