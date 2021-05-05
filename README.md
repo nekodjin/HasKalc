@@ -45,7 +45,8 @@ With git installed, the project can be cloned with the command
 `git clone https://github.com/ancomcat/APCSP_Performance.git`. This will clone
 the project into the current working directory.
 
-Users that have a `bash` distribution handy can use the bash script provided by running `./compile` from the root directory.
+Users that have a POSIX-compatible shell handy can use the build script
+provided by running `./compile` from the root directory.
 
 For all others, assuming `ghc` is installed, the command should resemble
 `ghc src/**/*.hs -outputdir build/ -o target/apcsp-performance`. If you do not
