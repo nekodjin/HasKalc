@@ -4,7 +4,7 @@ submission. Though I have no intent with this project save submission to the
 College Board, this is an open source work licensed under the BSD 3 Clause
 license. The license can be found at [`/LICENSE`](./LICENSE).
 
-This project is a [TUI](./README.md "Terminal User Interface") arithmetic expression
+This project is a TUI (Terminal User Interface) arithmetic expression
 interpreter. It allows for mathematical expressions to be entered and
 subsequently evaluated. It has two main parts - a parser, and a runtime. The
 parser is tasked with dissecting the user's input and formatting it in a more
