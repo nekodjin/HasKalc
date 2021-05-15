@@ -1,4 +1,4 @@
-module Parser.Token where
+module Lexer.Token where
 
 data Token
   = Add -- `+`

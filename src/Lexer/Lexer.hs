@@ -1,4 +1,4 @@
-module Parser.Lexer where
+module Lexer.Lexer where
 
 import           Data.Maybe   (isJust)
 import           Parser.Token (Token (..))
