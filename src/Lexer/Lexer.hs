@@ -9,22 +9,22 @@ tokens :: String -> [Token]
 tokens = concatMap tokens' . words
     where
         tokens' :: String -> [Token]
-        tokens' [ ] = [   ]
-        tokens' "+" = [Add]
-        tokens' "-" = [Sub]
-        tokens' "*" = [Mul]
-        tokens' "×" = [Mul]
-        tokens' "/" = [Div]
-        tokens' "÷" = [Div]
-        tokens' "^" = [Exp]
-        tokens' ('(' : str) = LParen : tokens' str
-        tokens' (')' : str) = RParen : tokens' str
+        tokens' [ ] = [    ]
+        tokens' "+" = [TAdd]
+        tokens' "-" = [TSub]
+        tokens' "*" = [TMul]
+        tokens' "×" = [TMul]
+        tokens' "/" = [TDiv]
+        tokens' "÷" = [TDiv]
+        tokens' "^" = [TExp]
+        tokens' ('(' : str) = TLParen : tokens' str
+        tokens' (')' : str) = TRParen : tokens' str
         tokens' str
-          | last str == '(' = tokens' (init str) ++ [LParen]
-          | last str == ')' = tokens' (init str) ++ [RParen]
+          | last str == '(' = tokens' (init str) ++ [TLParen]
+          | last str == ')' = tokens' (init str) ++ [TRParen]
           | otherwise       = [tokens'' str]
 
         tokens'' :: String -> Token
         tokens'' str
-          | isJust (readMaybe str :: Maybe Double) = Const $ read str
-          | otherwise                              = Illegal str
+          | isJust (readMaybe str :: Maybe Double) = TConst $ read str
+          | otherwise                              = TIllegal str

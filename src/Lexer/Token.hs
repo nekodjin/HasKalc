@@ -1,13 +1,13 @@
 module Lexer.Token where
 
 data Token
-  = Add -- `+`
-  | Sub -- `-`
-  | Mul -- `×`, `*`
-  | Div -- `÷`, `/`
-  | Exp -- `^`
-  | LParen -- `(`
-  | RParen -- `)`
-  | Const Double -- number literals
-  | Illegal String -- unparsable tokens
+  = TAdd -- `+`
+  | TSub -- `-`
+  | TMul -- `×`, `*`
+  | TDiv -- `÷`, `/`
+  | TExp -- `^`
+  | TLParen -- `(`
+  | TRParen -- `)`
+  | TConst Double -- number literals
+  | TIllegal String -- unparsable tokens
   deriving (Eq, Show)

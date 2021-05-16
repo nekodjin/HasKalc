@@ -1,8 +1,8 @@
 module Parser.Operator where
 
 data Operator
-    = Add
-    | Sub
-    | Mul
-    | Div
-    | Exp
+    = OAdd
+    | OSub
+    | OMul
+    | ODiv
+    | OExp
