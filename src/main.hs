@@ -1,19 +1,30 @@
 module Main where
 
-import           Parser.Lexer  (tokens)
-import           Parser.Parser (checkParens, checkIllegal)
+import           Lexer.Lexer    (tokens)
+import           Parser.Checker (checkIllegal, checkParens)
+import           Parser.Parser  (postify, treeify)
 
 main :: IO ()
 main = do
     line <- getLine
 
+    let toks = tokens line
+
     putStrLn "Tokens:"
-    print . tokens $ line
+    print toks
 
     putStrLn "Illegal tokens:"
-    print . checkIllegal . tokens $ line
+    print $ checkIllegal toks
 
     putStrLn "Legal parens:"
-    print . checkParens . tokens $ line
-    
+    print $ checkParens toks
+
+    putStrLn "Postified tokens:"
+    print $ postify toks
+
+    putStrLn "AST:"
+    print $ treeify $ postify toks
+
+    putStrLn ""
+
     main

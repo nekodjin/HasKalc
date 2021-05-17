@@ -6,3 +6,4 @@ data Operator
     | OMul
     | ODiv
     | OExp
+      deriving ( Show, Eq )

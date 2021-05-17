@@ -1,13 +1,11 @@
 module Lexer.Token where
 
+import           Lexer.Operator (Operator (..))
+
 data Token
-  = TAdd -- `+`
-  | TSub -- `-`
-  | TMul -- `×`, `*`
-  | TDiv -- `÷`, `/`
-  | TExp -- `^`
+  = TOp Operator
   | TLParen -- `(`
   | TRParen -- `)`
   | TConst Double -- number literals
   | TIllegal String -- unparsable tokens
-  deriving (Eq, Show)
+    deriving (Eq, Show)

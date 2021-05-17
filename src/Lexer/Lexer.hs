@@ -1,22 +1,31 @@
 module Lexer.Lexer where
 
-import           Data.Maybe   (isJust)
-import           Parser.Token (Token (..))
-import           Text.Read    (readMaybe)
+import           Control.Monad  (mfilter)
+import           Data.Maybe     (fromMaybe, isJust)
+import           Data.Text      (pack, replace, unpack)
+import           Lexer.Operator (Operator (..))
+import           Lexer.Token    (Token (..))
+import           Text.Read      (readMaybe)
 
 -- Tokenize a given expression
 tokens :: String -> [Token]
-tokens = concatMap tokens' . words
+tokens =
+    concatMap tokens'. words . unpack     .
+    -- the following code enables negation of parenthesized expressions
+    replace (pack ")") (pack "))")        .
+    replace (pack "-((") (pack "(-1 * (") .
+    replace (pack "(") (pack "((")        .
+    pack
     where
         tokens' :: String -> [Token]
-        tokens' [ ] = [    ]
-        tokens' "+" = [TAdd]
-        tokens' "-" = [TSub]
-        tokens' "*" = [TMul]
-        tokens' "×" = [TMul]
-        tokens' "/" = [TDiv]
-        tokens' "÷" = [TDiv]
-        tokens' "^" = [TExp]
+        tokens' [ ] = [        ]
+        tokens' "+" = [TOp TAdd]
+        tokens' "-" = [TOp TSub]
+        tokens' "*" = [TOp TMul]
+        tokens' "×" = [TOp TMul]
+        tokens' "/" = [TOp TDiv]
+        tokens' "÷" = [TOp TDiv]
+        tokens' "^" = [TOp TExp]
         tokens' ('(' : str) = TLParen : tokens' str
         tokens' (')' : str) = TRParen : tokens' str
         tokens' str

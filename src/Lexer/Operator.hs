@@ -1,19 +1,20 @@
 module Lexer.Operator where
 
 data Operator
-  = Add
-  | Sub
-  | Mul
-  | Div
-  | Exp
+  = TAdd
+  | TSub
+  | TMul
+  | TDiv
+  | TExp
     deriving ( Show, Eq )
 
--- The Ord instance for 
+-- The Ord instance for Operator indicates precedence
 instance Ord Operator where
-    (<=) _   Exp = True
-    (<=) Exp _   = False
-    (<=) _   Mul = True
-    (<=) _   Div = True
-    (<=) Mul _   = False
-    (<=) Div _   = False
-    (<=) _   _   = True
+    (<=) TExp TExp = False
+    (<=) _    TExp = True
+    (<=) TExp _    = False
+    (<=) _    TMul = True
+    (<=) _    TDiv = True
+    (<=) TMul _    = False
+    (<=) TDiv _    = False
+    (<=) _    _    = True
