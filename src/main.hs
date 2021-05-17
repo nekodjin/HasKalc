@@ -1,8 +1,9 @@
 module Main where
 
-import           Lexer.Lexer    (tokens)
-import           Parser.Checker (checkIllegal, checkParens)
-import           Parser.Parser  (postify, treeify)
+import           Interpreter.Interpreter (eval)
+import           Lexer.Lexer             (tokens)
+import           Parser.Checker          (checkIllegal, checkParens)
+import           Parser.Parser           (postify, treeify)
 
 main :: IO ()
 main = do
@@ -24,6 +25,9 @@ main = do
 
     putStrLn "AST:"
     print $ treeify $ postify toks
+
+    putStrLn "Value:"
+    print $ eval $ treeify $ postify toks
 
     putStrLn ""
 
