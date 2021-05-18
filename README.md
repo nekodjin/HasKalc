@@ -23,7 +23,7 @@ number or a symbol. The lexer then passes this list of tokens to the "lower
 parser", which does the rest of the work of turning the tokens into a proper
 AST.
 
-## Current Version: `1.0.0`
+## Current Version: `1.0.1`
 [SemVer specification](https://semver.org "SemVer Specification")
 
 ## Documentation

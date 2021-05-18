@@ -35,6 +35,9 @@ hideLoop = do
     else if line == "hide" then do
         putStrLn "You are already in hidden mode."
         hideLoop
+    else if words line == [] then do
+        putStrLn "Cannot evaluate an empty expression."
+        hideLoop
     else do
         let toks = tokens line
 
@@ -67,6 +70,9 @@ exposeLoop = do
         exposeLoop
     else if line == "hide" then
         hideLoop
+    else if words line == [] then do
+        putStrLn "Cannot evaluate an empty expression."
+        exposeLoop
     else do
         let toks = tokens line
 
