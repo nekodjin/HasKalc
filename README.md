@@ -37,16 +37,14 @@ This project relies on the following dependencies:
 - Glasgow Haskell Compiler (`ghc`)
 
 ## Building
+### IMPORTANT NOTE: This project is currently not available for Windows.
+
 With git installed, the project can be cloned with the command
 `git clone https://github.com/ancomcat/APCSP_Performance.git`. This will clone
 the project into the current working directory.
 
 Users that have a POSIX-compatible shell handy can use the build script
 provided by running `./compile` from the project's root directory.
-
-Windows users can compile the project by running
-`ghc src\*.hs src\*\*.hs -outputdir build\ -o target\apcsp-performance.exe`
-in CMD.
 
 After compilation, either with the provided script or with the provided
 command, the executable should be located at `target/apcsp-performance`
