@@ -47,5 +47,4 @@ Users that have a POSIX-compatible shell handy can use the build script
 provided by running `./compile` from the project's root directory.
 
 After compilation, either with the provided script or with the provided
-command, the executable should be located at `target/apcsp-performance`
-(`target\apcsp-performance.exe` for Windows users).
+command, the executable should be located at `target/apcsp-performance`.
