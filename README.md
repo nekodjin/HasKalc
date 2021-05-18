@@ -23,12 +23,8 @@ number or a symbol. The lexer then passes this list of tokens to the "lower
 parser", which does the rest of the work of turning the tokens into a proper
 AST.
 
-## Current Version: `rapid`
-`rapid` means rapid development. This project is still, metaphorically, being
-born. The project will not recieve an official version number until there is
-a stable and fully functional version of it, at which point versioning will
-begin with version `1.0.0`. If you wish to understand how the versioning format
-works, check out the [semver](https://semver.org "SemVer Specification") spec.
+## Current Version: `1.0.0`
+[SemVer specification](https://semver.org "SemVer Specification")
 
 ## Documentation
 There is currently no documentation for this project.
