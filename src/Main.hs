@@ -4,10 +4,12 @@ import           Interpreter.Interpreter (eval)
 import           Lexer.Lexer             (tokens)
 import           Parser.Checker          (checkIllegal, checkParens)
 import           Parser.Parser           (postify, treeify)
-import           System.IO
+import           System.IO               (hFlush, hSetEncoding, stdout, utf8)
 
 main :: IO ()
 main = do
+    hSetEncoding stdout utf8
+    
     putStrLn "APCSP Performance Task - Avery R.\n\
              \Enter an arithmetic expression for evaluation.\n\
              \Use the command `expose` to expose the intermediate\n\
