@@ -10,7 +10,7 @@ main :: IO ()
 main = do
     hSetEncoding stdout utf8
     
-    putStrLn "APCSP Performance Task - Avery R.\n\
+    putStrLn "HasKalc - A Calculator Written in Haskell - Avery R.\n\
              \Enter an arithmetic expression for evaluation.\n\
              \Use the command `expose` to expose the intermediate\n\
              \steps of evaluation.\n\
