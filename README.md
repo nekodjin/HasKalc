@@ -21,7 +21,7 @@ Source files are located in the [`/src`](./src/) directory.
 
 ## Building
 
-1.  Clone the source:
+1.  Clone the source
     <br>
     `git clone https://github.com/nekodjin/HasKalc.git`
 2.  Build
