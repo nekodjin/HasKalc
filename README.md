@@ -1,50 +1,44 @@
-# APCSP Performance Task
-This repository contains the source files for my 2021 APCSP Performance Task
-submission. Though I have no intent with this project save submission to the
-College Board, this is an open source work licensed under the BSD 3 Clause
-license. The license can be found at [`/LICENSE`](./LICENSE).
+# HasKalc
+### A Calculator Written in Haskell
 
-This project is a TUI (Terminal User Interface) arithmetic expression
-interpreter. It allows for mathematical expressions to be entered and
-subsequently evaluated. It has two main parts - a parser, and a runtime. The
-parser is tasked with dissecting the user's input and formatting it in a more
-machine-friendly way. This machine-friendly representation is known as an AST -
-Abstract Syntax Tree. The AST is then passed to the runtime, which is tasked
-with evaluating the expression and returning the result.
+This project was originally a submission to the College Board for the APCSP
+Create Performance Task. It is licensed under the BSD 3 Clause license, which
+is available at [`/LICENSE`](./LICENSE).
 
-Within the parser, there are two subsections of the program: the lexer and...
-the parser. Those Computer Scientists working on compiler theory don't seem to
-be very adept at providing distinct names for distinct things.
-
-In any case, the lexer and the "lower parser" divide the work of the "upper
-parser". The lexer takes care of translating the raw textual information
-provided by the user into "tokens" - individual chunks of meaning, such as a
-number or a symbol. The lexer then passes this list of tokens to the "lower
-parser", which does the rest of the work of turning the tokens into a proper
-AST.
-
-## Current Version: `1.0.1`
-[SemVer specification](https://semver.org "SemVer Specification")
-
-## Documentation
-There is currently no documentation for this project.
-
-## Source Files
-The source code can be found in the [`/src`](./src/) directory.
+## Current Version: `1.0.2`
+Changelog is available at [`/changelog.md`](./changelog.md).
+<br>
+[SemVer Spec](https://semver.org)
 
 ## Dependencies
-This project relies on the following dependencies:
-- Glasgow Haskell Compiler (`ghc`)
+- [Glasgow Haskell Compiler](https://haskell.org/ghc/) 8.x.x
+
+## Documentation
+There is currently no documentation for this project
+
+## Source files
+Source files are located in the [`/src`](./src/) directory.
 
 ## Building
-### IMPORTANT NOTE: This project is currently not available for Windows.
 
-With git installed, the project can be cloned with the command
-`git clone https://github.com/ancomcat/APCSP_Performance.git`. This will clone
-the project into the current working directory.
-
-Users that have a POSIX-compatible shell handy can use the build script
-provided by running `./compile` from the project's root directory.
-
-After compilation, either with the provided script or with the provided
-command, the executable should be located at `target/apcsp-performance`.
+1.  Clone the source:
+    <br>
+    `git clone https://github.com/nekodjin/HasKalc.git`
+2.  Build
+    - With a POSIX-Compliant Shell:
+      <br>
+      `sh compile`
+    - With Windows CMD:
+      <br>
+      ```
+      mkdir build
+      mkdir target
+      ghc src\Interpreter\Interperter.hs src\Lexer\Lexer.hs src\Lexer\Operator.hs src\Lexer\Token.hs src\Parser\Checker.hs src\Parser\Expression.hs src\Parser\Operator.hs src\Parser\Parser.hs src\Main.hs -outputdir build -o target\haskalc.exe
+      ```
+3.  Execute
+    - For Windows:
+      <br>
+      `target\haskalc`
+    - For Other OSes:
+      <br>
+      `target/haskalc`
