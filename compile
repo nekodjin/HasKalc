@@ -21,4 +21,4 @@ if ! test -d $wd/target; then
     mkdir $wd/target
 fi
 
-$ghc $wd/src/*.hs $wd/src/*/*.hs -outputdir $wd/build -o $wd/target/haskalc
+$ghc $wd/src/*.hs $wd/src/*/*.hs -outputdir $wd/build -o $wd/target/haskalc -O2

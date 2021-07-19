@@ -5,7 +5,7 @@ This project was originally a submission to the College Board for the APCSP
 Create Performance Task. It is licensed under the BSD 3 Clause license, which
 is available at [`/LICENSE`](./LICENSE).
 
-## Current Version: `1.0.2`
+## Current Version: `1.0.3`
 Changelog is available at [`/changelog.md`](./changelog.md).
 <br>
 [SemVer Spec](https://semver.org)
@@ -33,7 +33,7 @@ Source files are located in the [`/src`](./src/) directory.
       ```
       mkdir build
       mkdir target
-      ghc src\Interpreter\Interpreter.hs src\Lexer\Lexer.hs src\Lexer\Operator.hs src\Lexer\Token.hs src\Parser\Checker.hs src\Parser\Expression.hs src\Parser\Operator.hs src\Parser\Parser.hs src\Main.hs -outputdir build -o target\haskalc.exe
+      ghc src\Interpreter\Interpreter.hs src\Lexer\Lexer.hs src\Lexer\Operator.hs src\Lexer\Token.hs src\Parser\Checker.hs src\Parser\Expression.hs src\Parser\Operator.hs src\Parser\Parser.hs src\Main.hs -outputdir build -o target\haskalc.exe -O2
       ```
 3.  Execute
     - For Windows:
