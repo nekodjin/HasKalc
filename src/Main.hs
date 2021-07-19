@@ -31,7 +31,7 @@ hideLoop = do
     line <- getLine
 
     if line == "quit" then
-        putStrLn "Exiting APCSP Performance Task..."
+        putStrLn "Exiting HasKalc..."
     else if line == "expose" then
         exposeLoop
     else if line == "hide" then do
@@ -66,7 +66,7 @@ exposeLoop = do
     line <- getLine
 
     if line == "quit" then
-        putStrLn "Exiting APCSP Performance Task..."
+        putStrLn "Exiting HasKalc..."
     else if line == "expose" then do
         putStrLn "You are already in exposed mode."
         exposeLoop
