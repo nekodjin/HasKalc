@@ -16,8 +16,8 @@ main = do
              \steps of evaluation.\n\
              \Use the command `hide` to hide the intermediate steps.\n\
              \Use the command `quit` to exit the program.\n\
-             \Note that all operators (i.e. `+`, `-`, `×`, `*`, `÷`,\n\
-             \`/`, `^`) must be surrounded by whitespace on both sides.\n\
+             \Note that all operators (i.e. `+`, `-`, `*`, `/`, `^`)\n\
+             \must be surrounded by whitespace on both sides.\n\
              \Some error checking systems are in place, but no\n\
              \guarantees are made regarding the evaluation of malformed\n\
              \inputs."
