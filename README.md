@@ -33,7 +33,7 @@ Source files are located in the [`/src`](./src/) directory.
       ```
       mkdir build
       mkdir target
-      ghc src\Interpreter\Interperter.hs src\Lexer\Lexer.hs src\Lexer\Operator.hs src\Lexer\Token.hs src\Parser\Checker.hs src\Parser\Expression.hs src\Parser\Operator.hs src\Parser\Parser.hs src\Main.hs -outputdir build -o target\haskalc.exe
+      ghc src\Interpreter\Interpreter.hs src\Lexer\Lexer.hs src\Lexer\Operator.hs src\Lexer\Token.hs src\Parser\Checker.hs src\Parser\Expression.hs src\Parser\Operator.hs src\Parser\Parser.hs src\Main.hs -outputdir build -o target\haskalc.exe
       ```
 3.  Execute
     - For Windows:
